@@ -1,0 +1,41 @@
+:root {
+	--bg: #0e0a14;
+	--bg-soft: #191126;
+	--surface: rgba(255, 255, 255, 0.96);
+	--surface-strong: rgba(255, 255, 255, 0.88);
+	--text: #130f1a;
+	--muted: #5f576f;
+	--line: rgba(58, 45, 76, 0.14);
+	--accent: #6d2dfd;
+	--accent-2: #4f61ff;
+	--shadow: 0 22px 60px rgba(17, 8, 30, 0.18);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: 'Manrope', sans-serif;
+	font-size: 0.9rem;
+	color: var(--text);
+	background:
+		radial-gradient(circle at top left, rgba(109, 45, 253, 0.18), transparent 28%),
+		radial-gradient(circle at top right, rgba(255, 79, 180, 0.12), transparent 22%),
+		linear-gradient(180deg, #faf7ff 0%, #f3edf9 48%, #ede6f5 100%);
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	background-image: linear-gradient(rgba(26, 18, 38, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(26, 18, 38, 0.035) 1px, transparent 1px);
+	background-size: 34px 34px;
+	opacity: 0.72;
+}

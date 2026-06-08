@@ -5,7 +5,10 @@ menuToggle.textContent = "☰";
 
 menuToggle.addEventListener("click", () => {
   siteNav.classList.toggle("open");
-  menuToggle.textContent = siteNav.classList.contains("open") ? "×" : "☰";
+
+  const isOpen = siteNav.classList.contains("open");
+  menuToggle.textContent = isOpen ? "×" : "☰";
+  menuToggle.setAttribute("aria-expanded", isOpen);
 });
 
 const contactForm = document.querySelector('#contact-form');

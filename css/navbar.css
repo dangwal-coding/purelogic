@@ -1,7 +1,3 @@
-.site-nav a {
-	font-family: 'Montserrat', sans-serif;
-}
-
 .site-nav {
 	display: flex;
 	align-items: center;
@@ -9,6 +5,7 @@
 }
 
 .site-nav a {
+	font-family: 'Montserrat', sans-serif;
 	color: #4c4560;
 	font-weight: 700;
 	padding: 0.5rem 0.2rem;
@@ -30,6 +27,10 @@
 	gap: 1rem;
 }
 
+.menu-toggle {
+	display: none;
+}
+
 @media (max-width: 760px) {
 	.section {
 		padding: 3.5rem 0;
@@ -37,71 +38,41 @@
 }
 
 @media (max-width: 768px) {
-  body {
-  overflow-x: hidden;
-  }
-
-  .nav-shell {
-    position: relative;
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .site-nav {
-    position: fixed !important;
+    position: fixed;
     top: 0;
-    right: -260px !important;
-    left: auto !important;
-
-    width: 240px !important;
-    height: 100vh;
-
+    right: 0;
+    width: 240px;
+    height: 100dvh;
     background: #fff;
     padding: 90px 25px 25px;
-
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 18px;
-
-    transform: none !important;
-    transition: right 0.06s ease-out !important;
+    transform: translateX(110%);
+    transition: transform 0.3s ease;
     z-index: 2000;
-    box-shadow: -6px 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: -6px 0 20px rgba(0,0,0,0.15);
   }
 
   .site-nav.open {
-    right: 0 !important;
+    transform: translateX(0);
   }
 
-  .site-nav a {
-    width: 100%;
-    color: #111;
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-}
-
-@media (max-width: 768px) {
-@media (max-width: 768px) {
   .menu-toggle {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-
-    position: fixed !important;
-    top: 16px !important;
-    right: 16px !important;
-  background:transparent !important;
-      border:none !important;
-      box-shadow:none !important;
-      cursor: pointer;
-    width: 46px !important;
-    height: 46px !important;
-    padding: 0 !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 30px !important;
-    line-height: 46px !important;
-    z-index: 999999 !important;
+    display: flex;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 3000;
+    font-size: 30px;
+    background: transparent;
+    border: none;
   }
-}
 }

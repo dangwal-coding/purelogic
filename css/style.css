@@ -1,47 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap');
 @import url('./footer.css');
 @import url('./navbar.css');
-:root {
-	--bg: #0e0a14;
-	--bg-soft: #191126;
-	--surface: rgba(255, 255, 255, 0.96);
-	--surface-strong: rgba(255, 255, 255, 0.88);
-	--text: #130f1a;
-	--muted: #5f576f;
-	--line: rgba(58, 45, 76, 0.14);
-	--accent: #6d2dfd;
-	--accent-2: #ff4fb4;
-	--shadow: 0 22px 60px rgba(17, 8, 30, 0.18);
-}
-
-* {
-	box-sizing: border-box;
-}
-
-html {
-	scroll-behavior: smooth;
-}
-
-body {
-	margin: 0;
-	font-family: 'Manrope', sans-serif;
-	font-size: 0.9rem;
-	color: var(--text);
-	background:
-		radial-gradient(circle at top left, rgba(109, 45, 253, 0.18), transparent 28%),
-		radial-gradient(circle at top right, rgba(255, 79, 180, 0.12), transparent 22%),
-		linear-gradient(180deg, #faf7ff 0%, #f3edf9 48%, #ede6f5 100%);
-}
-
-body::before {
-	content: '';
-	position: fixed;
-	inset: 0;
-	pointer-events: none;
-	background-image: linear-gradient(rgba(26, 18, 38, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(26, 18, 38, 0.035) 1px, transparent 1px);
-	background-size: 34px 34px;
-	opacity: 0.72;
-}
+@import url('./contact.css');
+@import url('./default.css');
 
 a {
 	color: inherit;
@@ -59,7 +20,7 @@ img {
 }
 
 .section {
-	padding: 4.5rem 0;
+	padding: 0.5rem 0;
 }
 
 .section.slim {
@@ -118,8 +79,7 @@ img {
 
 .hero-grid,
 .split-layout,
-.band-grid,
-.contact-grid {
+.band-grid {
 	display: grid;
 	gap: 1.5rem;
 }
@@ -235,9 +195,7 @@ img {
 .panel-card p,
 .info-card p,
 .package-card p,
-.contact-card p,
 .band-grid p,
-.footer-grid p,
 .form-note {
 	color: var(--muted);
 	line-height: 1.65;
@@ -246,8 +204,7 @@ img {
 .hero-panel,
 .panel-card,
 .info-card,
-.package-card,
-.contact-card {
+.package-card {
 	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: 1.15rem;
@@ -337,8 +294,7 @@ img {
 
 .section-heading h2,
 .package-card h3,
-.info-card h3,
-.contact-card h2 {
+.info-card h3 {
 	margin: 0;
 }
 
@@ -471,8 +427,7 @@ img {
 }
 
 .info-card,
-.package-card,
-.contact-card {
+.package-card {
 	padding: 1.5rem;
 }
 
@@ -520,50 +475,6 @@ img {
 .package-grid .package-card:first-child {
 	grid-column: span 2;
 }
-
-.contact-grid {
-	grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-	align-items: start;
-}
-
-.contact-card label {
-	display: grid;
-	gap: 0.45rem;
-	margin-bottom: 1rem;
-	font-weight: 600;
-}
-
-.contact-card input,
-.contact-card select,
-.contact-card textarea {
-	width: 100%;
-	border: 1px solid var(--line);
-	border-radius: 0.9rem;
-	background: rgba(255, 255, 255, 0.96);
-	color: var(--text);
-	padding: 0.9rem 1rem;
-	font: inherit;
-}
-
-.contact-card textarea {
-	resize: vertical;
-	min-height: 150px;
-}
-
-.contact-card input::placeholder,
-.contact-card textarea::placeholder {
-	color: #8193b6;
-}
-
-.contact-info > div + div {
-	margin-top: 1rem;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-
 @media (max-width: 900px) {
 	.hero-grid,
 	.split-layout,
