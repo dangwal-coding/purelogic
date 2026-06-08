@@ -1,0 +1,12 @@
+.sticky-whats {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.sticky-whats img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}

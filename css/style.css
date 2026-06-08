@@ -3,6 +3,7 @@
 @import url('./navbar.css');
 @import url('./contact.css');
 @import url('./default.css');
+@import url('../css/whatshapp.css');
 
 a {
 	color: inherit;
