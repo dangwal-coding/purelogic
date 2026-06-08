@@ -45,37 +45,48 @@
 
         <section class="section band-muted">
             <div class="container contact-grid">
-                <form class="contact-card" id="contact-form">
-                    <h2>Send your inquiry</h2>
-                    <label>
-                        Name
-                        <input type="text" name="name" placeholder="Your name" required>
-                    </label>
-                    <label>
-                        Email
-                        <input type="email" name="email" placeholder="you@company.com" required>
-                    </label>
-                    <label>
-                        Service need
-                        <select name="service" required>
-                            <option value="">Select a service</option>
-                            <option>Service desk support</option>
-                            <option>Microsoft 365 / Azure</option>
-                            <option>Endpoint & Intune management</option>
-                            <option>Security & compliance</option>
-                            <option>Managed infrastructure</option>
-                            <option>Consulting project</option>
-                        </select>
-                    </label>
-                    <label>
-                        Message
-                        <textarea name="message" rows="5"
-                            placeholder="Tell us about your current setup and support goals." required></textarea>
-                    </label>
-                    <button class="btn primary" type="submit">Submit request</button>
-                    <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
-                </form>
+               <form class="contact-card" id="contact-form">
+    <h2>Send your inquiry</h2>
 
+    <label>
+        Name
+        <input type="text" name="name" placeholder="Your name" required>
+    </label>
+
+    <label>
+        Email
+        <input type="email" name="email" placeholder="you@company.com" required>
+    </label>
+
+    <label>
+        Service need
+        <select name="service" required>
+            <option value="">Select a service</option>
+            <option>Service desk support</option>
+            <option>Microsoft 365 / Azure</option>
+            <option>Endpoint & Intune management</option>
+            <option>Security & compliance</option>
+            <option>Managed infrastructure</option>
+            <option>Consulting project</option>
+        </select>
+    </label>
+
+    <label>
+        Message
+        <textarea name="message" rows="5" placeholder="Tell us about your current setup and support goals." required></textarea>
+    </label>
+
+    <button class="btn primary" type="submit">Submit request</button>
+</form>
+
+<div class="popup" id="popup">
+    <div class="popup-card">
+        <h2>Thank You!</h2>
+        <img class="Success-logo" src="Images/animation/Okay.gif" alt="Success message">
+        <p >Your request has been captured for follow-up.</p>
+        <button type="button" id="close-popup">OK</button>
+    </div>
+</div>
                 <aside class="contact-card contact-info">
                     <h2>Quick summary</h2>
                     <div>

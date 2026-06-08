@@ -1,3 +1,4 @@
+//navbar code start here
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
     const siteNav = document.querySelector("#site-nav");
@@ -83,14 +84,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+//navbar code end here 
+const contactForm = document.getElementById('contact-form');
+const popup = document.getElementById('popup');
+const closePopup = document.getElementById('close-popup');
 
-const contactForm = document.querySelector('#contact-form');
-const formNote = document.querySelector('#form-note');
+contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-if (contactForm && formNote) {
-	contactForm.addEventListener('submit', (event) => {
-		event.preventDefault();
-		formNote.textContent = 'Thanks. Your request has been captured for follow-up.';
-		contactForm.reset();
-	});
-}
+    popup.classList.add('show');
+
+    contactForm.reset();
+});
+
+closePopup.addEventListener('click', function () {
+    popup.classList.remove('show');
+});
