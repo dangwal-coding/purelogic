@@ -1,12 +1,24 @@
 .sticky-whats {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
+  position: fixed !important;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
 }
 
 .sticky-whats img {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .sticky-whats {
     width: 100px;
     height: 100px;
-    cursor: pointer;
+    right: 14px;
+    bottom: 14px;
+  }
 }
